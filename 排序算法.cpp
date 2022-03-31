@@ -48,6 +48,39 @@ void BubbleSort (int data[]) {
 		}	
 	} 
 }
+void SelectSort (int data[]) {
+	// 简单选择排序
+	for (int i = 0; i <= MAX; i++) {
+		for (int j = i + 1; j <= MAX; j++) {
+			if (data[i] > data[j]) {
+				int temp = data[i];
+				data[i] = data[j];
+				data[j] = temp;
+			}
+		}
+	} 
+} 
+// 快速排序算法 
+int Partition (int data[], int low, int high) {
+	int pivotkey = data[low];
+	while(low < high){
+		while(low < high && data[high] >= pivotkey) high--;
+		data[low] = data[high]; 
+		while(low < high && data[low] <= pivotkey) low++;
+		data[high] = data[low];
+	}
+	data[low] = pivotkey;
+	return low;
+}
+void QuickSort (int data[], int low, int high) {
+	int pivot;
+	if (low < high) {
+		pivot = Partition(data, low, high);
+		QuickSort(data, low, pivot - 1);
+		QuickSort(data, pivot + 1, high);
+	} 
+} 
+
 
 int main () {
 	int data[MAX + 1] = {4,5,2,7,9,2,1,6}; 
@@ -57,7 +90,9 @@ int main () {
 		printf("%d", data[i]); 
 	//InsertSort(data); 直接排序算法 
 	//SellSort(data); 希尔排序算法
-	BubbleSort(data); 
+	//BubbleSort(data); 冒泡排序算法
+	//QuickSort(data, 0, MAX); 快速排序算法
+	SelectSort(data); 
 	printf("\n事后：\n"); 
 	for (int i = 0; i <= MAX; i++)
 		printf("%d", data[i]); 
