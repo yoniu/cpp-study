@@ -21,5 +21,16 @@
     <ClCompile Include="echo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="references.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="class.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="echo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
