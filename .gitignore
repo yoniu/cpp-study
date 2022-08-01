@@ -4,3 +4,4 @@
 /hello world/hello world/.vs/hello world
 /hello world/hello world/hello world/x64/Debug
 /hello world/hello world/x64/Debug
+*.lock
