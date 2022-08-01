@@ -17,7 +17,7 @@ public:
 	}
 };
 
-int main() {
+int main3() {
 	Player a;
 	a.x = 0;
 	a.y = 0;
@@ -25,4 +25,5 @@ int main() {
 	std::cout << a.GetCurrentX() << std::endl;
 	std::cout << a.GetCurrentY() << std::endl;
 	std::cin.get();
+	return 0;
 }

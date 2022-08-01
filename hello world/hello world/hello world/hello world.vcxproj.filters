@@ -27,6 +27,9 @@
     <ClCompile Include="class.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="class.base.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="echo.h">
